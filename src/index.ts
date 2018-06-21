@@ -16,8 +16,8 @@ router.post('/', (req, res, next) => {
 
 /* POST get block number. */
 router.post('/getBlockNumber', (req, res, next) => {
-  let web3
-  web3 = Web3.constructor(new web3.providers.HttpProvider('http://localhost:8545'))
+  const web3 = new Web3('http://localhost:8485')
+  // web3 = Web3.constructor(new web3.providers.HttpProvider('http://localhost:8545'))
   // web3.eth.getBlockNumber().then(console.log)
   res.send(web3.eth.getBlockNumber)
 })
