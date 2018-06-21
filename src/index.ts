@@ -17,10 +17,8 @@ router.post('/', (req, res, next) => {
 /* POST get block number. */
 router.post('/getBlockNumber', async (req, res, next) => {
   const web3 = new Web3('http://localhost:8545')
-  // web3 = Web3.constructor(new web3.providers.HttpProvider('http://localhost:8545'))
-  // web3.eth.getBlockNumber().then(console.log)
   const blockNumber = await web3.eth.getBlockNumber()
-  res.send({blockNumber})
+  res.send({ blockNumber })
 })
 
 export default router
