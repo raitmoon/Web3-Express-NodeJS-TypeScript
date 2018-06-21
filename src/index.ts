@@ -11,10 +11,15 @@ router.get('/', (req, res, next) => {
 
 /* POST home page. */
 router.post('/', (req, res, next) => {
+  res.send('Hello')
+})
+
+/* POST get block number. */
+router.post('/getBlockNumber', (req, res, next) => {
   let web3
   web3 = Web3.constructor(new web3.providers.HttpProvider('http://localhost:8545'))
-  web3.eth.getBlockNumber().then(console.log)
-  res.send('Hello')
+  // web3.eth.getBlockNumber().then(console.log)
+  res.send(web3.eth.getBlockNumber)
 })
 
 export default router

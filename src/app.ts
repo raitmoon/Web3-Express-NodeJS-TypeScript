@@ -55,3 +55,4 @@ app.use((error: any, req, res, next) => {
 })
 
 export default app
+// module.exports = app

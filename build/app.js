@@ -48,4 +48,5 @@ app.use((error, req, res, next) => {
     return null;
 });
 exports.default = app;
+// module.exports = app
 //# sourceMappingURL=app.js.map
