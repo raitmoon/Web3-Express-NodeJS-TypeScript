@@ -5,14 +5,13 @@
   "private": true,
   "main": "build/www.js",
   "scripts": {
-    "dev": "npm run build && npm run start",
+    "dev": "ts-node src/www.ts",
     "build": "npm run lint && npm run compile",
     "compile": "tsc",
     "watch": "tsc --watch",
-    "start": "npm install && node build/www.js",
-    "test": "mocha tests/build/test.js",
+    "start": "node build/www.js",
+    "test": "mocha -r ts-node/register tests/**/*.test.ts",
     "lint": "tslint --format stylish --exclude src/command.ts src/**/*.ts",
-    "compiletests": "node ./node_modules/typescript/bin/tsc -p ./tests",
     "postinstall": "rm -f node_modules/web3/index.d.ts && npm run build"
   },
   "dependencies": {
@@ -44,9 +43,11 @@
     "@types/serve-favicon": "^2.2.28",
     "@types/web3": "^1.0.0",
     "browser-sync": "^2.18.8",
+    "chai": "^4.1.2",
     "marked": "^0.3.6",
     "mocha": "^3.2.0",
     "nodemon": "^1.11.0",
-    "supertest": "^3.1.0"
+    "supertest": "^3.1.0",
+    "ts-node": "^6.1.2"
   }
 }
