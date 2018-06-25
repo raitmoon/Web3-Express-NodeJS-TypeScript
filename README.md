@@ -11,11 +11,15 @@ git clone https://github.com/tmnrkb/Web3-Express-NodeJS.git
 cd Web3-Express-NodeJS
 
 npm install
+```
 
+Then
+
+```
 npm start
 ```
 
-Issue POST requests with postman
+And issue POST requests with postman
 
 Or
 
