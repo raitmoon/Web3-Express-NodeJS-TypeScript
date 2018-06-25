@@ -3,7 +3,7 @@ Sample Ethereum program using web3, express, nodejs and typescript
 
 # Install and Test
 
-Note: Before using this sample, set up private ethereum node at http://localhost:8545
+Note: Before using this sample, set up private ethereum node at http://localhost:7545
 
 ```
 git clone https://github.com/tmnrkb/Web3-Express-NodeJS.git
